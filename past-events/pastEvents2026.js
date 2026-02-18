@@ -112,6 +112,45 @@ const eventData = [
 
 
   {
+    eventTitle: "Dash Dance: The Sequel",
+    imageUrl: "https://images.start.gg/images/tournament/878421/image-b53fca5b793660a225a60f2924f80633.jpg",
+    eventUrl: "https://www.start.gg/tournament/dash-dance-the-sequel/details",
+    date: "February 15 2026",
+    location: "New York",
+    entrants: 10,
+    first: "Bassyxx",
+    second: "firestarW",
+    third: "John",
+    vodsUrl: "",
+    hideRankImage: true
+  },
+  {
+    eventTitle: "Exodus 2026",
+    imageUrl: "https://images.start.gg/images/tournament/873548/image-4d1423b87f343c812d7b54bf5b9b62c6.png",
+    eventUrl: "https://www.start.gg/tournament/exodus-2026/details",
+    date: "February 15 2026",
+    location: "California",
+    entrants: 84,
+    first: "The Doctor",
+    second: "SipMastah",
+    third: "RapMonster",
+    vodsUrl: "https://www.youtube.com/playlist?list=PLK6QY5XQ-uu08g9VBmZnNgnNkaTkVTY3d",
+    hideRankImage: false
+  },
+  {
+    eventTitle: "Unc Frozen's Icebox 11: Lovey Dubby Edition",
+    imageUrl: "https://images.start.gg/images/tournament/872259/image-697d83b9de5bb9f9afd9c4d52d2f48cb.jpg",
+    eventUrl: "https://www.start.gg/tournament/unc-frozen-s-icebox-11-lovey-dubby-edition/details",
+    date: "February 14 2026",
+    location: "Texas",
+    entrants: 8,
+    first: "J-am",
+    second: "AshleyAtari",
+    third: "Sente",
+    vodsUrl: "",
+    hideRankImage: true
+  },
+  {
     eventTitle: "King’s Ransom 2",
     imageUrl: "https://images.start.gg/images/tournament/807112/image-629ebbd7c0afcc7f7993a88b00c12cc0.png",
     eventUrl: "https://www.start.gg/tournament/king-s-ransom-2/details",

@@ -5967,15 +5967,76 @@ function showCalendar(month, year) {
         link.appendChild(image);
         cell.appendChild(link);
 
-        // Exodus 2026
-        } else if (month === 1 && date === 14 && year === 2026) {    
-        // Example link with image
+        // Exodus 2026 + DD2
+        } else if (month === 1 && date === 15 && year === 2026) {    
+        const events = [
+            {   
+                link: "https://www.start.gg/tournament/exodus-2026/details",
+                imageSrc: "https://images.start.gg/images/tournament/873548/image-4d1423b87f343c812d7b54bf5b9b62c6.png"
+                
+            },
+            {
+                link: "https://www.start.gg/tournament/dash-dance-the-sequel/details",
+                imageSrc: "https://images.start.gg/images/tournament/878421/image-b53fca5b793660a225a60f2924f80633.jpg"
+            }
+    
+        ];
+        let currentIndex = 0; // Initialize current index
+    
         let link = document.createElement("a");
-        link.href = "https://www.start.gg/tournament/exodus-2026/details";
         link.target = "_blank";
     
         let image = document.createElement("img");
-        image.src = "https://images.start.gg/images/tournament/873548/image-4d1423b87f343c812d7b54bf5b9b62c6.png";
+    
+        image.classList.add("calendarImg");
+    
+        link.appendChild(image);
+        cell.appendChild(link);
+    
+        // Function to fade in/out the image and link
+        function fadeInOut(element) {
+            let opacity = 0;
+            let increasing = true;
+            let interval = setInterval(function() {
+                if (increasing) {
+                    opacity += 0.05;
+                } else {
+                    opacity -= 0.05;
+                }
+                element.style.opacity = opacity;
+                if (opacity >= 1) {
+                    increasing = false;
+                    setTimeout(() => {
+                        increasing = true;
+                        updateLinkAndImage(); // Update link and image after fully visible
+                    }, 2000); // Image and link will be fully visible for 2 seconds before fading out
+                } else if (opacity <= 0) {
+                    clearInterval(interval);
+                    fadeInOut(element); // Restart the fading animation
+                }
+            }, 100); // Adjust the timing as needed
+        }
+    
+        // Function to update the link and image
+        function updateLinkAndImage() {
+            link.href = events[currentIndex].link;
+            image.src = events[currentIndex].imageSrc;
+            currentIndex = (currentIndex + 1) % events.length; // Move to the next event, looping back to the beginning if necessary
+        }
+    
+        updateLinkAndImage(); // Initially update link and image
+        fadeInOut(image); // Start fade-in/out animation // Start cycling events
+
+
+        // Docked and Loaded 4 Day 1
+        } else if (month === 1 && date === 20 && year === 2026) {    
+        // Example link with image
+        let link = document.createElement("a");
+        link.href = "https://www.start.gg/tournament/docked-and-loaded-4/details";
+        link.target = "_blank";
+    
+        let image = document.createElement("img");
+        image.src = "https://images.start.gg/images/tournament/837439/image-df48365313d01a791dca3b6ed8c9ec17.png";
     
         image.classList.add("calendarImg");
     
@@ -5983,8 +6044,7 @@ function showCalendar(month, year) {
         link.appendChild(image);
         cell.appendChild(link);
 
-
-        // SOTT 11 + CoL AxB + Chamberi
+        // SOTT 11 + CoL AxB + Chamberi + Docked and Loaded 4 Day 2 + Northstar IV Day 1
         } else if (month === 1 && date === 21 && year === 2026) {    
         const events = [
             {   
@@ -5999,6 +6059,78 @@ function showCalendar(month, year) {
             {
                 link: "https://www.start.gg/tournament/chamberi-champions-5-la-enfermedad-del-lomo/details",
                 imageSrc: "https://images.start.gg/images/tournament/866192/image-3f3e6a563981bd53b7818ef7dd6e9a67.png"
+            },
+            {
+                link: "https://www.start.gg/tournament/docked-and-loaded-4/details",
+                imageSrc: "https://images.start.gg/images/tournament/837439/image-df48365313d01a791dca3b6ed8c9ec17.png"
+            },
+            {
+                link: "https://www.start.gg/tournament/northstar-iv-4th-star-at-st-cloud-state-university/details",
+                imageSrc: "https://images.start.gg/images/tournament/846246/image-a72b87e4ba315c212ba95cab96635833.png"
+            }
+    
+        ];
+        let currentIndex = 0; // Initialize current index
+    
+        let link = document.createElement("a");
+        link.target = "_blank";
+    
+        let image = document.createElement("img");
+    
+        image.classList.add("calendarImg");
+    
+        link.appendChild(image);
+        cell.appendChild(link);
+    
+        // Function to fade in/out the image and link
+        function fadeInOut(element) {
+            let opacity = 0;
+            let increasing = true;
+            let interval = setInterval(function() {
+                if (increasing) {
+                    opacity += 0.05;
+                } else {
+                    opacity -= 0.05;
+                }
+                element.style.opacity = opacity;
+                if (opacity >= 1) {
+                    increasing = false;
+                    setTimeout(() => {
+                        increasing = true;
+                        updateLinkAndImage(); // Update link and image after fully visible
+                    }, 2000); // Image and link will be fully visible for 2 seconds before fading out
+                } else if (opacity <= 0) {
+                    clearInterval(interval);
+                    fadeInOut(element); // Restart the fading animation
+                }
+            }, 100); // Adjust the timing as needed
+        }
+    
+        // Function to update the link and image
+        function updateLinkAndImage() {
+            link.href = events[currentIndex].link;
+            image.src = events[currentIndex].imageSrc;
+            currentIndex = (currentIndex + 1) % events.length; // Move to the next event, looping back to the beginning if necessary
+        }
+    
+        updateLinkAndImage(); // Initially update link and image
+        fadeInOut(image); // Start fade-in/out animation // Start cycling events
+
+        // Northstar IV Day 2 + Docked and Loaded 4 Day 3 + BB: EotE
+        } else if (month === 1 && date === 22 && year === 2026) {    
+        const events = [
+            {   
+                link: "https://www.start.gg/tournament/docked-and-loaded-4/details",
+                imageSrc: "https://images.start.gg/images/tournament/837439/image-df48365313d01a791dca3b6ed8c9ec17.png"
+                
+            },
+            {
+                link: "https://www.start.gg/tournament/northstar-iv-4th-star-at-st-cloud-state-university/details",
+                imageSrc: "https://images.start.gg/images/tournament/846246/image-a72b87e4ba315c212ba95cab96635833.png"
+            },
+            {
+                link: "https://www.start.gg/tournament/bristol-s-basement-echoes-of-the-eye/details",
+                imageSrc: "https://images.start.gg/images/tournament/876302/image-b89cee1fa577271d432f968cdcbd2b10.jpg"
             }
     
         ];
